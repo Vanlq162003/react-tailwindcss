@@ -1,37 +1,72 @@
-import { useState } from 'react'
-import './App.css'
-import { getAllData } from './api/instance'
+import './App.css';
+import { useEffect, useState } from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Preloader from '../src/components/Pre'
+import Home from './pages/Home.jsx'
+import About from './pages/About'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import Project from './pages/Project';
+import Contact from './pages/Contact';
 
 function App() {
-  const [data, setData] = useState([])
-  useState(() => {
-    getAllData()
-      .then(data => {
-        // Sử dụng toàn bộ dữ liệu ở đây
-        setData(data.posts)
+  const [load, upadateLoad] = useState(true);
+  // const [mousePosition, setMousePosition] = useState({
+  //   x: 0,
+  //   y: 0
+  // });
+  // console.log(mousePosition);
 
+  // useEffect(() => {
+  //   const mouseMove = e => {
+  //     setMousePosition({
+  //       x: e.clientX,
+  //       y: e.clientY
+  //     })
+  //   }
 
-      })
-      .catch(error => {
-        console.log('Đã xảy ra lỗi:', error);
-      });
+  //   window.addEventListener("mousemove", mouseMove);
 
-  })
-  console.log(data)
+  //   return () => {
+  //     window.removeEventListener("mousemove", mouseMove);
+  //   }
+  // }, []);
 
+  // const variants = {
+  //   default: {
+  //     x: mousePosition.x,
+  //     y: mousePosition.y
+  //   }
+  // }
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      upadateLoad(false);
+    }, 1200);
 
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
-
-    <>
-      <h1 className="text-3xl font-bold underline">
-        {data.map((item)=>{
-          return item.id
-        })}
-      </h1>
-    </>
-  )
+    <div className="App">
+      {/* <motion.div
+        className="cursor"
+        variants={variants}
+        animate="default"
+      /> */}
+      <Router>
+        <Preloader load={load} />
+        <div className="App" id={load ? "no-scroll" : "scroll"}>
+          <Routes>
+            <Route path='/' element={<Home />}></Route>
+            <Route path='/about' element={<About />}></Route>
+            <Route path='/project' element={<Project />}></Route>
+            <Route path='/contact' element={<Contact />}></Route>
+          </Routes>
+        </div>
+      </Router>
+    </div>
+  );
 }
 
-export default App
+export default App;
