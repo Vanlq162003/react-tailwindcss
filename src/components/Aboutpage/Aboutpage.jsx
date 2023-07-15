@@ -10,7 +10,9 @@ function Aboutpage() {
                 <Row className='textbackground'>
                     <Col md={7} >
                         <h3 className='aboutmetext'>About <span>Me</span></h3>
-                        <p className='aboutdetails'>I'm a self-taught Front End developer from India. I build websites with a focus on providing the experience for everyone using them and responsiveness. Curious to learn more about developing scalable distribution systems, love problem solving, and care about writing and maintainable code. A responsive design makes your website accessible to all users, regardless of their devices.
+                        <p className='aboutdetails'>Xin chào, tôi tên là Lê Quang Văn. Sinh năm 2003 và quê ở Thanh Hóa, tôi hiện đang sống và làm việc tại Hà Nội. Hiện tại, tôi đang theo học tại trường Cao đẳng FPT Polytechnic. <br />
+
+                            Sở thích của tôi nằm trong lĩnh vực lập trình và phát triển web. Tôi luôn hứng thú và đam mê trong việc tạo ra những trang web tuyệt đẹp và tương tác. Mục tiêu nghề nghiệp của tôi là trở thành một chuyên gia phát triển web front-end với khả năng tạo ra những ứng dụng web có tầm ảnh hưởng lớn.
                         </p>
                         <ul className='skilllist'>
                             <Row>
@@ -18,14 +20,14 @@ function Aboutpage() {
                                 <Col md={7}>
                                     <li>HTML5/CSS3</li>
                                     <li>JavaScript</li>
-                                    <li>jQuery</li>
-                                    <li>Bootsrap 5</li>
+                                    <li>TailwindCss</li>
+                                    <li>Bootstrap 5</li>
                                 </Col>
                                 <Col md={5}>
                                     <li>React Js</li>
-                                    <li>Redux Js</li>
-                                    <li>React-Bootsrap</li>
-                                    <li>Material-ui</li>
+                                    <li>Angular Js</li>
+                                    <li>PHP</li>
+                                    <li>NodeJs</li>
                                     <li>Git/Github</li>
                                 </Col>
                             </Row>

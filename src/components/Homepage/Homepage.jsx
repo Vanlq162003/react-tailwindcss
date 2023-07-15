@@ -6,6 +6,7 @@ import {
   AiFillGithub,
   AiOutlineTwitter,
   AiFillInstagram,
+  AiFillFacebook,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -20,21 +21,21 @@ function Home() {
             <span></span>
             <Text />
             <button onClick={() => {
-              window.open("https://github.com/rahulvijay81");
+              window.open("https://github.com/Vanlq162003");
             }}
               className='socailmediabtn'><AiFillGithub className='icon' /></button>
             <button onClick={() => {
-              window.open("https://www.linkedin.com/in/rahulvijay81/");
+              window.open("https://www.facebook.com/van.lequang.568/");
             }}
-              className='socailmediabtn'><FaLinkedinIn className='icon' /></button>
-            <button onClick={() => {
+              className='socailmediabtn'><AiFillFacebook className='icon' /></button>
+            {/* <button onClick={() => {
               window.open("https://twitter.com/rahulvijay8156");
             }}
               className='socailmediabtn'><AiOutlineTwitter className='icon' /></button>
             <button onClick={() => {
               window.open("https://instagram.com/rahulvijay81");
             }}
-              className='socailmediabtn'><AiFillInstagram className='icon' /></button>
+              className='socailmediabtn'><AiFillInstagram className='icon' /></button> */}
           </Col>
 
           <Col md={5}>

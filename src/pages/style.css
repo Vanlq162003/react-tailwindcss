@@ -70,10 +70,11 @@
   opacity: 0.9 !important;
 }
 .logo {
-  background-image: url(../Assets/logor.png);
+  background-image: url(../assets/Logo.png);
   background-size: cover;
   width: 90px;
   height: 80px;
+  border-radius: 10px;
 }
 
 .nav-link {
