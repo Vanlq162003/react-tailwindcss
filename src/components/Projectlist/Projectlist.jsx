@@ -20,18 +20,28 @@ function Projectlist() {
                 imgPath={useradminpanel}
                 isBlog={false}
                 title="My Portfolio"
-                description="Là trang web giới thiệu về bản thân tôi."
+                description="Là trang web giới thiệu về bản thân tôi. Sử dụng Reactjs, Bootstrap."
                 ghLink="https://vanlq162003.vercel.app/"
               />
             </Col>
 
-            <Col md={4} className="project-card">
+            {/* <Col md={4} className="project-card">
               <ProjectCard
                 imgPath={olximage}
                 isBlog={false}
                 title="LQV Store"
-                description="Là trang web bán hàng điện tử. Chạy thành công với dữ liệu ở localhost."
+                description="Là trang web bán hàng điện tử. Sử dụng Angular, json-server."
                 ghLink="https://angular-projects-two.vercel.app/home"
+              />
+            </Col> */}
+
+            <Col md={4} className="project-card">
+              <ProjectCard
+                imgPath={netfliximage}
+                isBlog={false}
+                title="Chat-App-FE"
+                description="Là trang web chat. Sử dụng Reactjs, ChakraUI ."
+                ghLink="https://github.com/Vanlq162003/FE_chat"
               />
             </Col>
 
@@ -39,9 +49,9 @@ function Projectlist() {
               <ProjectCard
                 imgPath={netfliximage}
                 isBlog={false}
-                title="React-Chat"
-                description="Là trang web chat. chạy thành công ở localhost với cơ sở dữ liệu liệu là firebase."
-                ghLink="https://vanlq-chat.vercel.app/"
+                title="Chat-App-BE"
+                description="Là trang web chat. Sử dụng  NodeJs, MongoDB, Socket.io ."
+                ghLink="https://github.com/Vanlq162003/BE_chat"
               />
             </Col>
 
